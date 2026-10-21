@@ -1,5 +1,6 @@
 package com.devsuperior.movieflix.config.customgrant;
 
+import java.io.Serial;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Map;
@@ -12,11 +13,13 @@ import org.springframework.security.oauth2.server.authorization.authentication.O
 
 public class CustomPasswordAuthenticationToken extends OAuth2AuthorizationGrantAuthenticationToken {
 
-	private static final long serialVersionUID = 1L;
+	@Serial
+    private static final long serialVersionUID = 1L;
 	
 	private final String username;
 	private final String password;
 	private final Set<String> scopes;
+
 	
 	public CustomPasswordAuthenticationToken(Authentication clientPrincipal,
 			@Nullable Set<String> scopes, @Nullable Map<String, Object> additionalParameters,

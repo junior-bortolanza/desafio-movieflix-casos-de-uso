@@ -11,6 +11,7 @@ public class StandardErrorDTO {
 	private String path;
 	
 	public StandardErrorDTO() {
+
 	}
 
 	public Instant getTimestamp() {
