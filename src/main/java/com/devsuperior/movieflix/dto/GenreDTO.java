@@ -1,5 +1,7 @@
 package com.devsuperior.movieflix.dto;
 
+import com.devsuperior.movieflix.entities.Genre;
+
 public class GenreDTO {
 
     private Long id;
@@ -12,6 +14,11 @@ public class GenreDTO {
     public GenreDTO(Long id, String name) {
         this.id = id;
         this.name = name;
+    }
+
+    public GenreDTO(Genre genre) {
+        this.id = genre.getId();
+        this.name = genre.getName();
     }
 
     public Long getId() {
