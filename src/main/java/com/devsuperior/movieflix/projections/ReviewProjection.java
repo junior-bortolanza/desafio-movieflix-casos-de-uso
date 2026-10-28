@@ -1,9 +1,11 @@
 package com.devsuperior.movieflix.projections;
 
-public interface UserDetailsProjection {
+public interface ReviewProjection {
 
-	String getUsername();
-	String getPassword();
-	Long getRoleId();
-	String getAuthority();
+	Long getId();
+	String getText();
+	Long getMovieId();
+	Long getUserId();
+	String getUserName();
+	String getUserEmail();
 }

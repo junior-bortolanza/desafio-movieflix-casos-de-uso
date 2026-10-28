@@ -1,8 +1,13 @@
 package com.devsuperior.movieflix.repositories;
 
-import com.devsuperior.movieflix.entities.Genre;
+import com.devsuperior.movieflix.entities.Review;
+import com.devsuperior.movieflix.projections.ReviewProjection;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface GenreRepository extends JpaRepository<Genre, Long> {
+import java.util.List;
 
+public interface ReviewRepository extends JpaRepository<Review, Long> {
+
+
+    List<ReviewProjection> searchByMovie(Long movieId);
 }
